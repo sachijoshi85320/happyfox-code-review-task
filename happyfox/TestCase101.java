@@ -11,10 +11,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
-/*
+/* Overall Code Quality is Poor.
  * Code Formatting Is Missing. Please use Prettier
  * In complete Code, No Validation is done. There is no use of Assertions or Verification of Toast Messages.
  * Thread.sleep is used multiple times. Please avoid using Thread.sleep and use Implicit instead.
+ * Absolute XPaths were used in some places due to lack of stable attributes – ideally should be replaced with relative XPaths or CSS Selectors.
+ * POM (Page Object Model) is not followed yet. WebElements are directly accessed in the test class. In a real-world project, refactoring into POM would improve scalability and maintainability.
+ * Validation/Assertions are missing — adding assertion logic or toast message verification would make it a proper test.
  */
 
 public class Testcase101 {

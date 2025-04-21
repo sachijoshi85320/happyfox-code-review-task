@@ -1,0 +1,5 @@
+util/TestUtil.class
+base/BasePage.class
+pages/LoginPage.class
+pages/TablePage.class
+pages/HomePage.class

@@ -1,4 +1,4 @@
-package pages;
+package com.happyfox.pages;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import base.BasePage;
+import com.happyfox.base.BasePage;
 
 public class TablePage extends BasePage {
 
@@ -14,7 +14,7 @@ public class TablePage extends BasePage {
     List<WebElement> rows;
 
     public TablePage(WebDriver driver) {
-        super(driver);
+        super();
     }
 
     public void retrieveRowTexts() {

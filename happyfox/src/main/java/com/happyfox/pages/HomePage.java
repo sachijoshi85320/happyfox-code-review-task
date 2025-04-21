@@ -1,9 +1,9 @@
-package pages;
+package com.happyfox.pages;
+
+import com.happyfox.base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import base.BasePage;
 
 public class HomePage extends BasePage {
 
@@ -11,16 +11,16 @@ public class HomePage extends BasePage {
     WebElement profileLnk;
     
     public HomePage(WebDriver driver) {
-        super(driver);
+        super();
     }
 
-    public void verifyHomePage() {
-        if (!driver.getCurrentUrl().equals("https://www.happyfox.com/home")) {
-            throw new IllegalStateException("Not on the home page");
-        }
+    public boolean verifyHomePage() {
+        wait.until(driver -> driver.getCurrentUrl().contains("/home"));
+        return driver.getCurrentUrl().equals("https://www.happyfox.com/home");
     }
 
     public void navigateToProfile() {
+        waitUntilElementIsClickable(profileLnk);
         profileLnk.click();
     }
 }
